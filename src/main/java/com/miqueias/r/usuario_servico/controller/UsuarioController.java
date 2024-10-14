@@ -29,7 +29,6 @@ public class UsuarioController {
     @GetMapping(value = "/busca-por-email/{email}",
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-
     public ResponseEntity<UsuarioDTO> findByEmail(@PathVariable(value = "email") String email){
         UsuarioDTO usuarioDTO = service.findByEmail(email);
         return ResponseEntity.ok(usuarioDTO);
