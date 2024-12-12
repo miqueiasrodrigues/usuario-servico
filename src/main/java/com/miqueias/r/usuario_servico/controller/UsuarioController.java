@@ -20,7 +20,6 @@ public class UsuarioController {
     @GetMapping(value = "/{id}",
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-
             public ResponseEntity<UsuarioDTO> findById(@PathVariable(value = "id") Long id){
         UsuarioDTO usuarioDTO = service.findById(id);
         return ResponseEntity.ok(usuarioDTO);
